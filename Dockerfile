@@ -1,1 +1,1 @@
-FROM httpd
+FROM java:8
