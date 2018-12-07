@@ -15,7 +15,9 @@ public static void main(String args[]) {
     sql = "INSERT INTO tabela (id, name, age) VALUES (1, 'Krystian', 21), (2, 'name2', 34), (3, 'name3', 96)";
     stmt=con.createStatement();
     stmt.executeUpdate(sql);
-    System.out.println("Wybierz: 1-Dodaj uzytkownika, 2-Wyswietl");
+    while(1)
+    {
+    System.out.println("Wybierz: 1-Dodaj uzytkownika, 2-Wyswietl, 3-Wyjdz");
     int i = sc.nextInt();
     if(i == 1)
     {
@@ -24,6 +26,7 @@ public static void main(String args[]) {
       System.out.print("ID: ");
       int id = sc.nextInt();
       preparedStatement.setInt(1, id);
+      sc.nextLine();
       System.out.print("Imie: ");
       String name = sc.nextLine();
       preparedStatement.setString(2, name);
@@ -36,9 +39,13 @@ public static void main(String args[]) {
       ResultSet rs=stmt.executeQuery("select * from tabela");
       while(rs.next())
       System.out.println(rs.getInt(1)+" "+rs.getString(2)+" "+rs.getInt(3));
+    } else if(i ==3)
+    {
+     System.exit(0) 
     } else
     {
       System.out.println("Nie ma takiej opcji!");
+    }
     }
     
     con.close();  
