@@ -6,7 +6,7 @@ public static void main(String args[]) {
   
   try{  
     Scanner sc = new Scanner(System.in);
-    Class.forName("com.mysql.jdbc.Driver");  
+    Class.forName("com.mysql.cj.jdbc.Driver");  
     Connection con=DriverManager.getConnection(  
     "jdbc:mysql://10.0.10.3:3306/baza","KAlbiniak","password");
     String sql = "CREATE TABLE IF NOT EXISTS tabela ((id int(10), name varchar(40), age int(3) )";
