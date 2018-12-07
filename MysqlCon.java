@@ -15,7 +15,7 @@ public static void main(String args[]) {
     sql = "INSERT INTO tabela (id, name, age) VALUES (1, 'Krystian', 21), (2, 'name2', 34), (3, 'name3', 96)";
     stmt=con.createStatement();
     stmt.executeUpdate(sql);
-    while(1)
+    while(true)
     {
     System.out.println("Wybierz: 1-Dodaj uzytkownika, 2-Wyswietl, 3-Wyjdz");
     int i = sc.nextInt();
