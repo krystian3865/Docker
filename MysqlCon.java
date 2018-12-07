@@ -41,14 +41,13 @@ public static void main(String args[]) {
       System.out.println(rs.getInt(1)+" "+rs.getString(2)+" "+rs.getInt(3));
     } else if(i ==3)
     {
-     System.exit(0);
+     con.close(); 
+     System.exit(0); 
     } else
     {
       System.out.println("Nie ma takiej opcji!");
     }
     }
-    
-    con.close();  
     }catch(Exception e){ 
     System.out.println(e);
     }  
