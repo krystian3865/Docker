@@ -35,7 +35,7 @@ public static void main(String args[]) {
     {
       ResultSet rs=stmt.executeQuery("select * from tabela");
       while(rs.next())
-      System.out.println(rs.getInt(1)+" "+rs.getString(2)+" "rs.getInt(3));
+      System.out.println(rs.getInt(1)+" "+rs.getString(2)+" "+rs.getInt(3));
     } else
     {
       System.out.println("Nie ma takiej opcji!");
