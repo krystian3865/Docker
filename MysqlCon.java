@@ -9,7 +9,7 @@ public static void main(String args[]) {
     Class.forName("com.mysql.cj.jdbc.Driver");  
     Connection con=DriverManager.getConnection(  
     "jdbc:mysql://10.0.10.3:3306/baza","KAlbiniak","password");
-    String sql = "CREATE TABLE IF NOT EXISTS tabela ((id int(10), name varchar(40), age int(3) )";
+    String sql = "CREATE TABLE IF NOT EXISTS tabela ( id int(10), name varchar(40), age int(3) )";
     Statement stmt=con.createStatement();
     stmt.executeUpdate(sql);
     sql = "INSERT INTO tabel (id, name, age) VALUES (1, 'Krystian', 21), (2, 'name2', 34), (3, 'name3', 96)";
