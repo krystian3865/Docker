@@ -12,7 +12,7 @@ public static void main(String args[]) {
     String sql = "CREATE TABLE IF NOT EXISTS tabela ( id int(10), name varchar(40), age int(3) )";
     Statement stmt=con.createStatement();
     stmt.executeUpdate(sql);
-    sql = "INSERT INTO tabel (id, name, age) VALUES (1, 'Krystian', 21), (2, 'name2', 34), (3, 'name3', 96)";
+    sql = "INSERT INTO tabela (id, name, age) VALUES (1, 'Krystian', 21), (2, 'name2', 34), (3, 'name3', 96)";
     stmt=con.createStatement();
     stmt.executeUpdate(sql);
     System.out.println("Wybierz: 1-Dodaj uzytkownika, 2-Wyswietl");
