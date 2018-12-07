@@ -41,7 +41,7 @@ public static void main(String args[]) {
       System.out.println(rs.getInt(1)+" "+rs.getString(2)+" "+rs.getInt(3));
     } else if(i ==3)
     {
-     System.exit(0) 
+     System.exit();
     } else
     {
       System.out.println("Nie ma takiej opcji!");
