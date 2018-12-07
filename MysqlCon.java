@@ -17,7 +17,7 @@ public static void main(String args[]) {
     stmt.executeUpdate(sql);
     System.out.println("Wybierz: 1-Dodaj uzytkownika, 2-Wyswietl");
     int i = sc.nextInt();
-    if(i.equals(1))
+    if(i.intValue() == 1)
     {
       sql = "INSERT INTO tabela" + "(id, name, age) VALUES" + "(?,?,?)";
       PreparedStatement preparedStatement = con.prepareStatement(sql);
@@ -28,10 +28,10 @@ public static void main(String args[]) {
       String name = sc.nextLine();
       preparedStatement.setString(2, name);
       System.out.print("Wiek: ");
-      String age = sc.nextLine();
+      String age = sc.nextInt();
       preparedStatement.setInt(3, age);
       preparedStatement .executeUpdate();
-    } else if(i.equals(2))
+    } else if(i.intValue() == 2)
     {
       ResultSet rs=stmt.executeQuery("select * from tabela");
       while(rs.next())
